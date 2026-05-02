@@ -795,18 +795,24 @@ function App() {
             </div>
 
             {override && (<>
-              <div style={{ borderRadius: 6, border: "1px solid #F59A00", background: "#FFF8EC", padding: "12px 14px", display: "flex", flexDirection: "column", gap: 8, marginBottom: 20 }}>
-                <div style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 12, color: "#F59A00" }}>
-                  <span style={{ fontSize: 14 }}>⚠</span>
-                  If Override disabled, this project will not accommodate Unverified workers.
-                </div>
-                <div style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 12, color: "#F59A00" }}>
-                  <span style={{ fontSize: 14 }}>⚠</span>
-                  When PII fields are visible, the project cannot accommodate Unverified workers.
+              <div style={{ borderRadius: 6, border: "1px solid #F59A00", background: "#FFF8EC", padding: "12px 14px", display: "flex", flexDirection: "column", gap: 10, marginBottom: 20 }}>
+                <div style={{ display: "flex", alignItems: "flex-start", gap: 6, fontSize: 12, color: "#F59A00" }}>
+                  <span style={{ fontSize: 14, flexShrink: 0 }}>⚠</span>
+                  <div>
+                    <span>This project will not accommodate Unverified workers if:</span>
+                    <div style={{ marginTop: 4, paddingLeft: 4 }}>
+                      <div>1. Override is disabled</div>
+                      <div>2. PII fields are visible</div>
+                    </div>
+                  </div>
                 </div>
                 <div style={{ display: "flex", alignItems: "flex-start", gap: 6, fontSize: 12, color: "#F59A00" }}>
                   <span style={{ fontSize: 14 }}>⚠</span>
                   Stored fields must be mandatory. They will appear in a separate section of the project consent form and will be auto-populated from the data the worker provides in the profile fields.
+                </div>
+                <div style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 12, color: "#F59A00" }}>
+                  <span style={{ fontSize: 14 }}>⚠</span>
+                  Stored fields cannot be made Skippable.
                 </div>
               </div>
 
