@@ -104,7 +104,7 @@
     btn.insertAdjacentHTML('beforeend', '<div class="spinner" id="spin"></div>');
 
     try {
-      const res = await fetch('/api/auth', {
+      const res = await fetch('/api/index', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ passcode })
